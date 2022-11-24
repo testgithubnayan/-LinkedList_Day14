@@ -4,15 +4,6 @@ public class LinkedList<T> {
     Node<T> head;
     Node<T> tail;
 
-    void display(){
-        Node<T> temp = head;
-        while (temp != null){
-            Systpackage com.bridgelabz.linkedlist;
-
-public class LinkedList<T> {
-    Node<T> head;
-    Node<T> tail;
-
     void push(T data){
         Node<T> node = new Node<>(data);
         if(head == null){
@@ -55,9 +46,17 @@ public class LinkedList<T> {
         T deletedElement = head.data;
         head = head.next;
         return deletedElement;
-    }em.out.println(temp.data);
+    }
+
+    public T popLast(){
+        T deletedElement = tail.data;
+        Node<T> temp = head;
+        while(temp.next != tail){
             temp = temp.next;
         }
+        temp.next = null;
+        temp = tail;
+        return  deletedElement;
+
     }
-}
 }
