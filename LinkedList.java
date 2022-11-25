@@ -16,6 +16,8 @@ public class LinkedList<T> {
         }
     }
 
+
+
    public Node<T> search(T searchData) {
         Node<T> temp = head;
         while(temp != null){
@@ -25,6 +27,7 @@ public class LinkedList<T> {
         }
         return null;
     }
+
 
     void add(T data){
         Node<T> node = new Node<>(data);
@@ -59,6 +62,9 @@ public class LinkedList<T> {
         return deletedElement;
     }
 
+
+   
+
     public T popLast(){
         T deletedElement = tail.data;
         Node<T> temp = head;
@@ -95,4 +101,5 @@ public class LinkedList<T> {
         return  deletedElement;
 
     }
+
 }
